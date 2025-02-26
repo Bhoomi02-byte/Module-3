@@ -71,3 +71,16 @@
             ->The View function retrieves data from the Model.
             ->The Template renders the data and generates an HTML response.
             ->The response is sent back to the user.
+
+        
+        MVC vs MVT:
+
+          | Feature          | MVC (Model-View-Controller)           | MVT (Model-View-Template)          |
+        |-----------------|--------------------------------------|------------------------------------|
+        | **View Handling** | Explicit Controller manages View logic | Django handles View logic internally |
+        | **Controller Role** | Separate Controller processes requests | Django View functions act as controllers |
+        | **Templating** | Uses external engines (JSP, Razor) | Uses Django Template Language (DTL) |
+        | **Routing** | Explicit route definitions in the controller | URLs are mapped directly to views |
+        | **Flexibility** | More control over business logic | Django automates many tasks |
+        | **Ease of Use** | Requires more manual coding | Faster development with Django’s built-in utilities |
+
