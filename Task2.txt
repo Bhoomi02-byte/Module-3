@@ -1,0 +1,73 @@
+﻿ 
+ 1) MVC/MVT:-
+
+   MVC (Model-View-Controller) – Used in Frameworks like ASP.NET, Spring, Ruby on Rails.
+
+    💡 Definition:
+       MVC divides the application into three interconnected components: 
+       Model, View, and Controller.
+       The controller acts as an intermediary between the model and the view.
+
+    📌 Components:
+
+        Model (M):
+
+            Represents the data layer and business logic.
+            Interacts with the database and performs CRUD operations.
+            Example: An ORM (like Entity Framework, Hibernate) or direct SQL queries.
+
+        View (V):
+
+            Handles the presentation layer (UI).
+            Renders data provided by the model, usually using HTML, CSS, JavaScript, or templating engines like Razor or JSP.
+
+        Controller (C):
+
+            Acts as the intermediary between Model and View.
+            Handles user input, processes business logic, updates the model, and decides which view to render.
+
+        Example: A route handler in ASP.NET Core (Controller class with ActionResult methods).
+
+    📌 Flow in MVC:
+
+            ->The user makes a request (e.g., clicking a button or submitting a form).
+            ->The Controller receives the request, processes it, and interacts with the Model.
+            ->The Model retrieves or updates data from the database.
+            ->The Controller sends the processed data to the View.
+            ->The View renders the response and sends it back to the user.
+
+
+    MVT (Model-View-Template) – Used in Django (Python)
+
+     💡 Definition:
+
+            MVT is a slight variation of MVC used in Django. 
+            It removes the explicit controller and replaces it with Django’s built-in View and Template system.
+
+      📌 Components:
+
+          Model (M):
+
+                Represents the database structure and business logic.
+                Uses Django’s ORM to interact with the database.
+                Example: A Django model class (models.Model).
+
+           View (V):
+
+                Handles the logic to retrieve and process data.
+                Calls the model and passes data to the template.
+                Example: A Django view function or class-based view.
+
+           Template (T):
+
+                Represents the presentation layer (HTML templates with placeholders for dynamic content).
+                Uses Django Template Language (DTL) to inject model data into HTML.
+
+           Example: {% for item in products %} {{ item.name }} {% endfor %}
+
+       📌 Flow in MVT:
+
+            ->The user requests a page via a URL.
+            ->The View function retrieves data from the Model.
+            ->The Template renders the data and generates an HTML response.
+            ->The response is sent back to the user.

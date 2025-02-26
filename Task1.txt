@@ -19,17 +19,17 @@
                    Processes client requests, performs computations or data retrieval, and sends appropriate responses.
 
              
-        3)Network:-Facilitates communication between clients and servers.
+         3)Network:-Facilitates communication between clients and servers.
 					Enables data exchange over the internet or local networks.
 
-        4)Protocols:-Standardized rules for data transmission and communication.
+         4)Protocols:-Standardized rules for data transmission and communication.
 					 Ensure data is transmitted in a secure, reliable, and structured manner.
 					 Examples: HTTP, TCP/IP, FTP, WebSockets.
 					 
-		5)Middleware:-Software that acts as an intermediary between clients and servers.
+		 5)Middleware:-Software that acts as an intermediary between clients and servers.
 					 Provides authentication, logging, message queuing, and transaction management.
 
-        6)Database:-A structured collection of data stored on the server.
+         6)Database:-A structured collection of data stored on the server.
                     Manages and stores data requested by the client.
 					Examples: MySQL, PostgreSQL, MongoDB.
 
