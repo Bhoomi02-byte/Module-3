@@ -1,0 +1,243 @@
+﻿
+1)Client-Server Architecture:-
+
+	->Client-Server Architecture is a fundamental concept in system design, where a network includes multiple clients and a server.
+
+         1) Clients → Devices or programs that request services or resources.
+         2)Server → A powerful machine that provides these services or resources.
+                   This architecture enables efficient data management and resource sharing.
+
+    🔹 Key Components of Client-Server Architecture:-
+
+       Several key components work together to ensure efficient communication, resource management, and service delivery:
+
+        
+         1)Client:- A device or application that requests services or resources from the server.
+                    Initiates communication and processes responses from the server.
+         
+		 2)Server:-A powerful machine or application that provides services to clients.
+                   Processes client requests, performs computations or data retrieval, and sends appropriate responses.
+
+             
+        3)Network:-Facilitates communication between clients and servers.
+					Enables data exchange over the internet or local networks.
+
+        4)Protocols:-Standardized rules for data transmission and communication.
+					 Ensure data is transmitted in a secure, reliable, and structured manner.
+					 Examples: HTTP, TCP/IP, FTP, WebSockets.
+					 
+		5)Middleware:-Software that acts as an intermediary between clients and servers.
+					 Provides authentication, logging, message queuing, and transaction management.
+
+        6)Database:-A structured collection of data stored on the server.
+                    Manages and stores data requested by the client.
+					Examples: MySQL, PostgreSQL, MongoDB.
+
+        7)User Interface (UI):-The part of the client application that users interact with.
+
+        8)Application Logic:-Code and algorithms that define the application’s functionality.
+							 Processes user inputs, interacts with the server, and manages data flow between the client and the server.
+
+           ->The Client-server model is a distributed application structure that partitions tasks or workloads 
+	         between the providers of a resource or service, called servers, and service requesters called clients.
+	      ->In the client-server architecture, when the client computer sends a request for data to the server through the internet, the server accepts the requested process and delivers the data packets requested back to the client. Clients do not share any of their resources. Examples of the Client-Server Model are Email, World Wide Web, etc.
+
+  Q). How Does the Client-Server Model Work?
+
+		->Client: When we say the word Client, it means to talk of a person or an organization using a particular service.
+		          Similarly in the digital world, a Client is a computer (Host) i.e. capable of receiving information or using a particular service from the service providers (Servers).
+
+		->Servers: Similarly, when we talk about the word Servers, 
+		          It means a person or medium that serves something. 
+				  Similarly in this digital world, 
+				  a Server is a remote computer that provides information (data) or access to particular services.
+
+		So, it is the Client requesting something and the Server serving it as long as it is in the database.
+
+
+		->The client-server model is a core network computing concept also building block of network computing.	
+		->In the client-server model, the server is a computer designed to process requests and deliver data to other (client) computers over a local network or the internet.
+
+
+	🔹 How a Web Browser Interacts with a Server
+			->User enters a URL (Uniform Resource Locator) in the browser.
+			->Browser requests the DNS (Domain Name System) server to resolve the domain.
+			->DNS server looks up the IP address of the web server.
+			->DNS server responds with the IP address of the web server.
+			->Browser sends an HTTP/HTTPS request to the web server.
+			->The server processes the request and sends back the necessary files.
+			->Browser renders the files and displays the website using:
+				->DOM (Document Object Model) Interpreter
+				->CSS Interpreter
+				->JS Engine (JIT Compiler - Just In Time Compilation)
+
+
+ 2)API (Application Programming Interface)-
+
+      ->An API is a collection of communication protocols and subroutines that allows different programs to interact with each other.
+
+   🔹 How an API Works:-
+
+			->The client initiates a request via the API's URI (Uniform Resource Identifier).
+			->The API forwards the request to the server.
+			->The server processes the request and sends back a response.
+			->The API transfers the response to the client.
+
+	🔹 Why APIs Are Secure:-
+
+			->Uses authorization credentials to restrict access.
+			->API Gateways limit access and minimize security threats.
+
+	🔹 API vs Web Application:-
+
+			->Feature        API                                         Web Application
+
+			Definition	    Acts as an interface between two programs	A network-based resource that users interact with
+			Communication	Two-way communication (between programs)	One-way communication (user interacts via browser)
+			Functionality	Sends & receives data between systems	    Executes tasks on a web browser
+			Access	        Requires authorization credentials	        Accessed via a URL
+
+			Examples	    Google Maps API, Twitter API	            Facebook, Gmail
+
+
+			"All web services are APIs, but not all APIs are web services."
+
+	🔹 Types of APIs:-
+
+		1)Web APIs → APIs for web applications
+
+			->Accessed using HTTP protocol.
+			->Can be built using Java, .NET, Python, etc.
+			->Used to interact with web servers and services.
+			
+			Four types of Web APIs:
+
+			 1)Open API (Publicly available)
+			 2)Partner API (Shared with specific partners)
+			 3)Internal API (Used within an organization)
+			 4)Composite API (Combines multiple API calls into one)
+
+		2)REST APIs (Representational State Transfer)
+
+		    ->A popular web API architecture that follows stateless communication.
+			->Uses standard HTTP methods:
+			  GET → Retrieve data
+			  POST → Create data
+			  PUT → Update data
+			  DELETE → Remove data
+
+
+    Stateless vs Stateful Systems
+			In computing, the concepts of stateless and stateful systems define how a system handles data and 
+			maintains session information between interactions.
+
+	🔹 Stateless Systems:-
+
+			A stateless system does not retain any memory or context of previous requests.
+			Each request is processed independently, as if it were the first time the system is encountering it.
+
+		✅ Characteristics of Stateless Systems:
+
+		   ->Each request is self-contained and does not depend on previous interactions.
+		   ->No session data is stored on the server.
+		   ->The client must send all required information (such as authentication tokens) with each request.
+		   ->Scales easily because no session data is maintained.
+
+		🚀 Examples of Stateless Systems:-
+
+		   ->HTTP Protocol (each request is treated as a separate event)
+		   ->REST APIs (each request contains all necessary data)
+		   ->Microservices Architecture (services do not store client state)
+
+		🔹 Example: Stateless API Request
+			A REST API request must include authentication details every time:
+			Even if the user was previously authenticated, the server does not remember this and requires credentials in each request.
+
+	🔹 Stateful Systems:-
+
+			A stateful system retains session or transaction data between requests.
+			Each request is dependent on the previous one, and the server maintains a session state.
+
+		✅ Characteristics of Stateful Systems:
+			
+		   ->The server remembers past requests and interactions.
+		   ->Session data is stored either on the server or in a database.
+		   ->Clients do not need to send full details with every request.
+
+			More complex to scale, as sessions must be managed.
+
+		🚀 Examples of Stateful Systems:-
+
+			->Databases (transactions maintain session state)
+			->Web Applications with Login Sessions (like Facebook, where user state is remembered)
+			->FTP Sessions (file transfers depend on previous authentication)
+
+		🔹 Example: Stateful Interaction
+
+			A banking application remembers the user session after login:
+			User logs in → Server creates a session.
+			User makes a transaction → Server remembers login state.
+			User logs out → Session is cleared.
+        
+		🔹 When to Use Stateless vs Stateful?
+
+			Use Stateless when scalability and efficiency are critical (e.g., APIs, microservices).
+			Use Stateful when maintaining user session or transaction history is necessary (e.g., banking, e-commerce).
+
+
+  3)Requests & Response:-
+
+          In network communication, requests and responses form the core of client-server interactions.
+		  A client sends a request, and the server processes it and sends back a response.
+
+   🔹 1. Understanding Requests
+
+		A request is a message sent by a client to a server to retrieve or manipulate resources.
+		It contains necessary information such as the request type, headers, and body.
+
+	✅ Components of a Request:
+		Request Line → Defines the request type (method) and the resource being accessed.
+		Headers → Contain metadata like content type, authentication tokens, and caching directives.
+		Body (Optional) → Includes additional data, typically for POST and PUT requests.
+
+   🔹 2. Understanding Responses
+
+		A response is the server's reply to a client’s request.
+		It contains the requested data (if available) and status information.
+
+	✅ Components of a Response:
+		Status Line → Indicates the HTTP version, status code, and status message.
+		Headers → Provide metadata like content type, caching policies, and cookies.
+		Body (Optional) → Contains the actual data (e.g., HTML, JSON, or XML).
+
+  🔹 3. Common HTTP Methods (Request Types)
+
+		GET	Retrieve data from the server	GET /users
+		POST	Send data to the server	POST /users
+		PUT	Update existing data	PUT /users/1
+		DELETE	Remove data from the server	DELETE /users/1
+		PATCH	Partially update data	PATCH /users/1
+
+
+  🔹 4. HTTP Status Codes in Responses
+
+		200 OK	   Request was successful	A list of users is returned
+		201 Created	Resource was created successfully	A new user was added
+		400 Bad Request	  Invalid request from the client	Missing parameters
+		401 Unauthorized	Authentication required	Invalid token
+		403 Forbidden	  Access denied	User lacks permissions
+		404 Not Found	  Resource does not exist	Incorrect URL
+		500 Internal Server Error	Server failed to process the request	
+
+  🔹 5. Request-Response Cycle (Client-Server Communication)
+
+     Step-by-Step Process:-
+		Client sends a request (e.g., user submits a login form).
+		Request is sent over the network to the server.
+		Server processes the request (e.g., checks login credentials).
+		Server sends a response (e.g., user authentication successful).
+		Client receives and processes the response (e.g., redirects to the dashboard).
+
+
+
+     
