@@ -1,0 +1,66 @@
+﻿Understanding the Basics of SQL Database: SELECT Queries, Table Joins, and Query Conditions
+
+SQL (Structured Query Language) is used to store, retrieve, and manipulate data in a relational database.
+		The fundamental concepts of SQL include:
+		   1)SELECT Queries – Retrieving data from tables
+		   2)Table Joins – Combining data from multiple tables
+		   3)Query Conditions – Filtering data based on conditions
+
+   1)SELECT Queries – Retrieving Data from a Table
+		a)The SELECT statement is used to fetch data from a database table. 
+		b)It allows retrieving specific columns or all columns from a table.
+
+	🔹 Basics of SELECT
+		a)Retrieving all columns: The * symbol is used to fetch all columns from a table.
+		b)Retrieving specific columns: We can specify the column names to fetch only the required data.
+	    c)Renaming columns: The AS keyword allows renaming columns for better readability.
+
+	📌 Example Scenarios
+		Fetching all employees from the database
+		Retrieving only the names and salaries of employees.
+
+
+   2️) Table Joins – Combining Data from Multiple Tables
+        a)In relational databases, data is stored in multiple tables that are connected through foreign keys.
+		JOIN operations help retrieve related data from these tables.
+
+	 🔹 Types of Table Joins
+		a)INNER JOIN – Returns only matching records from both tables.
+		b)LEFT JOIN (LEFT OUTER JOIN) – Returns all records from the left table and matching records from the right table.
+		c)RIGHT JOIN (RIGHT OUTER JOIN) – Returns all records from the right table and matching records from the left table.
+		d)FULL JOIN (FULL OUTER JOIN) – Returns all records from both tables, even if no match is found.
+
+	📌 Example Scenarios
+		Finding employee details along with department names
+		Retrieving a list of students with their respective subjects
+
+
+   3️) Query Conditions – Filtering Data Based on Criteria
+
+		 a)The WHERE clause is used to filter records based on specific conditions.
+
+	🔹 Common Query Conditions
+		a)Filtering based on a single condition (= operator).
+		b)Using multiple conditions (AND, OR).
+		c)Finding records within a range (BETWEEN).
+		d)Searching for patterns in text (LIKE).
+		e)Filtering based on missing values (IS NULL).
+
+	📌 Example Scenarios
+		a)Retrieving all employees who work in the IT department
+		b)Finding students who scored more than 80 marks
+		c)Listing all customers whose names start with 'A'
+
+
+   4) Understanding SQL Aggregate Functions
+
+        a)Aggregate functions in SQL perform calculations on multiple rows and return a single summarized value. 
+		b)These functions are commonly used with the GROUP BY clause to categorize and analyze data.
+
+	Common Aggregate Functions
+		Function	Description	                    Example Use Case
+		a)COUNT()	Counts the number of rows	    Count the total number of employees
+		b)SUM()	    Adds up all numeric values	    Calculate total sales revenue
+		c)AVG()	    Calculates the average value	Find the average salary of employees
+		d)MAX()	    Finds the highest value	        Get the highest marks in a class
+		e)MIN()	    Finds the lowest value	        Find the lowest product price	
